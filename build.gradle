@@ -1,3 +1,4 @@
+// 스프링부트를 사용하기 위한 플러그인 설정
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.6'
@@ -13,12 +14,36 @@ java {
 	}
 }
 
+//각 의존성(라이브러리)를 어떤 원격 저장소에서 받을 지 정하는 부분
 repositories {
 	mavenCentral()
 }
 
+//개발에 필요한 의존성(라이브러리)를 선언하는 부분
 dependencies {
+
 	implementation 'org.springframework.boot:spring-boot-starter'
+
+	/* API */
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	/* lombok */
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	/* H2 Database */
+	implementation 'com.h2database:h2'
+
+	/* Jpa */
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	/* Mariadb Java Clinet */
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
+
+	/* AWS Parameter Store */
+	implementation 'com.coveo:spring-boot-parameter-store-integration:1.5.0'
+
+	/* Test */
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
