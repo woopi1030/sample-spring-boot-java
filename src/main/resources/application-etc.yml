@@ -1,0 +1,11 @@
+awsParameterStorePropertySource:
+  enabled: true
+
+application:
+  name: ${/application/name/boiler-plate}
+
+spring.config.activate.on-profile: local
+
+---
+spring.config.activate.on-profile: development
+
