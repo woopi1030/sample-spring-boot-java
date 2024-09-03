@@ -1,2 +1,2 @@
-# sample-spring-boot
-sample-spring-boot
+# sample-spring-boot-java
+sample-spring-boot-java
