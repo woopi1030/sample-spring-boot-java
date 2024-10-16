@@ -1,6 +1,0 @@
-spring:
-  config:
-    import:
-      - application-server.yml
-      - application-db.yml
-      - application-etc.yml
